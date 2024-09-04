@@ -3,61 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Souvik Panda/Skills</title>
-    <link rel="stylesheet" href="Port.css">
+    <title>Souvik Panda | Skills</title>
+    <style>
+        /* General Body Styling */
+body.body_skills {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
+.menu_new {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.menubar_new {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menubar_new li {
+    display: inline;
+    padding: 0 15px;
+}
+
+.menubar_new li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menubar_new li a:hover {
+    color: #00aaff;
+}
+
+/* Skills Section */
+.skills-section {
+    flex-grow: 1;
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.skillbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.skill h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Hover Effects */
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #00aaff;
+}
+
+.skill:hover h3,
+.skill:hover p {
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.footer-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.socials li a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.socials li a:hover {
+    color: #00aaff;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+.footer-bottom span {
+    color: #00aaff;
+}
+
+    </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="body_skills"> 
     <div class="menu_new">
-      
         <ul class="menubar_new">
             <li><a href="index.html"><b>Home</b></a></li>
             <li class="MSkills"><a href="#"><b>Skills</b></a></li>
             <li><a href="resume.html"><b>Resume</b></a></li>
             <li><a href="contacts.html"><b>Contacts</b></a></li>
-        
-        </ul> <p class="lang">Languages</p>
-        <div class="skillbox">
-        <div class="C">
-        C
-       <p>  ⭐⭐⭐⭐ First prograing anguage. Learned DSA and algorithms in thi language</p>      
+        </ul>
     </div>
-    <div class="JAVA">
-        JAVA
-       <p>⭐⭐⭐ Inttermediate 2nd Learner Language solved over 50+ questions in leet code.</p>
-    </div>
-    <div class="html">
-      HTML
-      <p> ⭐⭐⭐⭐⭐id a lot of projects in HTML &CSS.</p>
-    </div>
-    <div class="JS">
-      JAVA SCRIPT
-      <p>⭐⭐⭐ </p>
-    </div>
-    <div class="CSS">
-       CSS
-       <p>⭐⭐⭐⭐</p>
-    </div>
-</div>   
-</div>
-      
-    </body>
 
+    <section class="skills-section">
+        <h2 class="section-title">Languages</h2>
+        <div class="skillbox">
+            <div class="skill">
+                <h3>C</h3>
+                <p>⭐⭐⭐⭐ - First programming language. Learned DSA and algorithms in this language.</p>
+            </div>
+            <div class="skill">
+                <h3>Java</h3>
+                <p>⭐⭐⭐ - Intermediate level. Solved over 50+ questions on LeetCode.</p>
+            </div>
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>⭐⭐⭐⭐⭐ - Completed numerous projects in HTML & CSS.</p>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>⭐⭐⭐ - Solid understanding of the basics.</p>
+            </div>
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>⭐⭐⭐⭐ - Proficient in creating responsive designs.</p>
+            </div>
+            <div class="skill">
+                <h3>Python</h3>
+                <p>⭐⭐⭐ - Proficient </p>
+            </div>
+        </div>
+    </section>
+      
     <footer>
         <div class="footer-content">
             <h3>Souvik</h3>
-            <p>Feel free to contact me from below listes socials.</p>
+            <p>Feel free to contact me through the social links below.</p>
             <ul class="socials">
                 <li><a href="https://www.facebook.com/souvik.panda.1650"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="https://www.instagram.com/_souvik_101/?hl=en"><i class="fa fa-instagram"></i></a></li>
                 <li><a href="https://github.com/souvik-panda18"><i class="fa fa-github"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/souvik-panda-60bb02250/"><i class="fa fa-linkedin-square"></i></a></li>
-               </ul>
-            
+            </ul>
         </div>
         
         <div class="footer-bottom">
-            <p>copyright &copy;2023 souvikPanda. designed by <span>Souvik</span></p>
+            <p>Copyright &copy; 2023 Souvik Panda. Designed by <span>Souvik</span></p>
         </div>
     </footer>
-    </html>
+</body>
+</html>

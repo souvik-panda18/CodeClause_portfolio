@@ -3,37 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Souvik Panda/Skills</title>
-    <link rel="stylesheet" href="Port.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact Souvik</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styling */
+        .menu_new {
+            background-color: #333;
+            padding: 20px 0;
+        }
+
+        .menubar_new {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .menubar_new li {
+            display: inline;
+            padding: 0 15px;
+        }
+
+        .menubar_new li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .menubar_new li a:hover {
+            color: #00aaff;
+        }
+
+        /* Contact Form Styling */
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #00aaff;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00aaff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0088cc;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-content h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .footer-content p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .socials {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .socials li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .socials li a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .socials li a:hover {
+            color: #00aaff;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        .footer-bottom span {
+            color: #00aaff;
+        }
+    </style>
 </head>
-<body class="body_skills">
-    <div class="menu_new_socials">
-      
+<body>
+
+    <!-- Navigation Menu Bar -->
+    <div class="menu_new">
         <ul class="menubar_new">
             <li><a href="index.html"><b>Home</b></a></li>
             <li><a href="skills.html"><b>Skills</b></a></li>
             <li><a href="resume.html"><b>Resume</b></a></li>
-            <li><a href=""><b>Contacts</b></a></li>
+            <li><a href="contacts.html"><b>Contact</b></a></li>
         </ul>
-         
     </div>
-        </body>
-   <footer>
-            <div class="footer-content">
-                <h3>Souvik</h3>
-                <p>Feel free to contact me from below listes socials.</p>
-                <ul class="socials">
-                    <li><a href="https://www.facebook.com/souvik.panda.1650"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://www.instagram.com/_souvik_101/?hl=en"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="https://github.com/souvik-panda18"><i class="fa fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/souvik-panda-60bb02250/"><i class="fa fa-linkedin-square"></i></a></li>
-                   </ul>
-                   
-                </div>
-            
-            <div class="footer-bottom">
-                <p>copyright &copy;2023 SouvikPanda. designed by <span>Souvik</span></p>
+
+    <!-- Contact Form -->
+    <div class="contact-container">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
             </div>
-        </footer>
-        </html>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Souvik</h3>
+            <p>Feel free to contact me through the links below.</p>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/souvik.panda.1650"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com/_souvik_101/?hl=en"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://github.com/souvik-panda18"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/souvik-panda-60bb02250/"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>copyright &copy;2023 souvikPanda. designed by <span>Souvik</span></p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize EmailJS
+        (function(){
+            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+        })();
+
+        // Handle Form Submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const serviceID = 'YOUR_SERVICE_ID';  // Replace with your EmailJS service ID
+            const templateID = 'YOUR_TEMPLATE_ID';  // Replace with your EmailJS template ID
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(function() {
+                    alert('Your message has been sent successfully!');
+                    document.getElementById('contact-form').reset(); // Reset form after successful submission
+                }, function(error) {
+                    alert('Failed to send your message. Please try again.');
+                    console.log('FAILED...', error);
+                });
+        });
+    </script>
+</body>
+</html>
